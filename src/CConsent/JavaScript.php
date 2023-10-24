@@ -60,6 +60,6 @@ class JavaScript extends AbstractConsentHandlerDependency
             }
         }
 
-        return $doc->saveHTML();
+        return preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<head>', '</head>', '<body>', '</body>'), array('', '', '', ''), $doc->saveHTML()));
     }
 }

@@ -83,7 +83,7 @@ class CConsent extends AbstractConsentHandlerDependency
      */
     public function jsFile(): string
     {
-        return 'bundles/dcc/js/dcc.js';
+        return '/bundles/dcc/js/dcc.js';
     }
 
     public function jsScript(): string
@@ -96,7 +96,7 @@ class CConsent extends AbstractConsentHandlerDependency
      */
     public function cssFile(): string
     {
-        return 'bundles/dcc/css/dcc.css';
+        return '/bundles/dcc/css/dcc.css';
     }
 
     /**

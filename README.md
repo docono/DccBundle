@@ -199,7 +199,7 @@ Activate the blocker and register a cookie-namespace with all the cookie names
 
     dcc('my-cookie-namespace', ['cookie-name-one', 'cookie-name-two'])
 </script>
-
+```
 
 Bind the cookie-namespace to the consent
 ```html
