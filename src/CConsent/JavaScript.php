@@ -21,7 +21,7 @@ class JavaScript extends AbstractConsentHandlerDependency
      */
     public static function handle()
     {
-        if(!self::$instance) {
+        if (!self::$instance) {
             self::$instance = new self;
         }
 
@@ -51,7 +51,7 @@ class JavaScript extends AbstractConsentHandlerDependency
         /** @var \DOMElement $element */
         $element = &$doc->getElementsByTagName('script')[0];
 
-        if(!$this->consentHandler()->hasPermission($element->getAttribute('data-consent'))) {
+        if (!$this->consentHandler()->hasPermission($element->getAttribute('data-consent'))) {
             if ($element->hasAttribute('src')) {
                 $element->setAttribute('data-src', $element->getAttribute('src'));
                 $element->removeAttribute('src');
@@ -60,6 +60,6 @@ class JavaScript extends AbstractConsentHandlerDependency
             }
         }
 
-        return preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<head>', '</head>', '<body>', '</body>'), array('', '', '', ''), $doc->saveHTML()));
+        return preg_replace('/^<!DOCTYPE.+?>/', '', str_replace(['<html>', '</html>', '<head>', '</head>', '<body>', '</body>'], '', $doc->saveHTML()));
     }
 }
