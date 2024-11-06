@@ -3,7 +3,7 @@
   "description": "cookie consent for pimcore",
   "type": "pimcore-bundle",
   "license": "GPL-3.0+",
-  "keywords": ["Pimcore", "Pimcore10", "cookie consent", "DccBundle"],
+  "keywords": ["Pimcore", "Pimcore11", "cookie consent", "DccBundle"],
   "authors": [
     {
       "name": "DOCONO.io Renzo Müller",
@@ -13,8 +13,8 @@
     }
   ],
   "require": {
-    "php": ">=8.1",
-    "pimcore/pimcore": ">=6.9",
+    "php": ">=8.2",
+    "pimcore/pimcore": "^11.0",
     "guzzlehttp/guzzle": "^7.7",
     "mpratt/embera": "~2.0"
   },
